@@ -1,0 +1,30 @@
+seed: 0
+model:
+  id: allenai/OLMoE-1B-7B-0125
+  revision: 9b0c1aa87e34a20052389dce1f0cf01da783f654
+  dtype: bfloat16
+  device: cuda
+eval:
+  # Accuracy-retention vs switch-rate on MMLU, to compare against Shen & Henderson (arXiv:2604.20156;
+  # they hit switch rate >50%->5% at ~90% accuracy retention on gpt-oss-20b + LoRA + self-distillation).
+  # Here: frozen OLMoE-1B-7B + ReMoE router + learned beta+mu (no adaptation). Answer-letter LL scoring.
+  task_dataset:
+    path: cais/mmlu
+    name: all
+    split: test
+    max_questions: 5000
+    question_field: question
+    choices_field: choices
+    answer_field: answer
+  batch_size: 8
+  max_length: 384
+  preload_router_state: true
+  restrict_layers: [4, 5, 6, 7, 8, 11, 12, 13]
+  freeze_capacity: 32
+  # Fixed-k dwell frontier -> switch rate 1/w (w=32 -> ~3%, below the Shen-Henderson 5% target).
+  freeze_durations: []
+  freeze_pool_selection: oracle
+  learned_beta_capacity: 32
+  learned_beta_thresholds: [0.5, 0.9]
+
+output_dir: outputs/mmlu5k_learned

@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moe-expert-eviction"
+version = "0.0.1"
+description = "Measured expert-residency and eviction policies for offloaded MoE inference (AXIOM @ NeurIPS 2026)"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+plots = [
+  "matplotlib>=3.8",
+]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.6",
+]
+ml = [
+  "torch>=2.3",
+  "transformers>=4.45",
+  "accelerate>=0.33",
+  "datasets>=2.20",
+  "safetensors>=0.4",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+

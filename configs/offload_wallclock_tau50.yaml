@@ -1,0 +1,31 @@
+# E2 measured tier: tau_multiplier=50 (each copy physically repeated 50x -> real DMA
+# traffic at ~25.5 ms/expert). Timing-only: 4 seqs; NLL is tau-invariant.
+seed: 0
+model:
+  id: allenai/OLMoE-1B-7B-0125
+  revision: 9b0c1aa87e34a20052389dce1f0cf01da783f654
+  dtype: bfloat16
+  device: cuda
+eval:
+  prompt_dataset:
+    path: teknium/OpenHermes-2.5
+    split: train
+    streaming: true
+    shuffle: true
+    seed: 0
+    shuffle_buffer_size: 8192
+    skip_records: 2080
+    max_records: 4
+    conversation_field: conversations
+    content_field: value
+  max_sequences: 4
+  max_length: 384
+  capacity: 32
+  restrict_layers: [4, 5, 6, 7, 8, 11, 12, 13]
+  policies: [resident_pool, lru, dwell, static_warm, learned]
+  dwells: [8, 16]
+  dwell_window_mults: [8]
+  learned_beta_thresholds: [0.5]
+  tau_multiplier: 50
+  timing_warmup_steps: 16
+output_dir: outputs/offload_wallclock_tau50

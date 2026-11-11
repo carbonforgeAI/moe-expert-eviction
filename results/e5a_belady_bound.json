@@ -1,0 +1,8 @@
+{
+  "capacity": 32,
+  "layer_seq_traces": 128,
+  "lru_transfers": 31776,
+  "belady_transfers": 15087,
+  "lru_over_belady": 2.1062,
+  "initial_loads": 4096
+}

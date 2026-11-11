@@ -1,0 +1,88 @@
+{
+  "trace": "data/eval_trace.npz",
+  "capacity": 32,
+  "heldout_seqs": [
+    12,
+    13,
+    14,
+    15
+  ],
+  "anchors": {
+    "lru_full16": 31776,
+    "belady_full16": 15087,
+    "lru_heldout": 10635,
+    "belady_heldout": 4985
+  },
+  "curve": [
+    {
+      "k": 0,
+      "transfers_full16": 31776,
+      "gap_recovered_full16_pct": 0.0,
+      "transfers_heldout": 10635,
+      "gap_recovered_heldout_pct": 0.0
+    },
+    {
+      "k": 1,
+      "transfers_full16": 29031,
+      "gap_recovered_full16_pct": 16.45,
+      "transfers_heldout": 9645,
+      "gap_recovered_heldout_pct": 17.52
+    },
+    {
+      "k": 2,
+      "transfers_full16": 26820,
+      "gap_recovered_full16_pct": 29.7,
+      "transfers_heldout": 8890,
+      "gap_recovered_heldout_pct": 30.88
+    },
+    {
+      "k": 4,
+      "transfers_full16": 23510,
+      "gap_recovered_full16_pct": 49.53,
+      "transfers_heldout": 7734,
+      "gap_recovered_heldout_pct": 51.35
+    },
+    {
+      "k": 8,
+      "transfers_full16": 19381,
+      "gap_recovered_full16_pct": 74.27,
+      "transfers_heldout": 6324,
+      "gap_recovered_heldout_pct": 76.3
+    },
+    {
+      "k": 16,
+      "transfers_full16": 16014,
+      "gap_recovered_full16_pct": 94.45,
+      "transfers_heldout": 5210,
+      "gap_recovered_heldout_pct": 96.02
+    },
+    {
+      "k": 32,
+      "transfers_full16": 15169,
+      "gap_recovered_full16_pct": 99.51,
+      "transfers_heldout": 5001,
+      "gap_recovered_heldout_pct": 99.72
+    },
+    {
+      "k": 64,
+      "transfers_full16": 15093,
+      "gap_recovered_full16_pct": 99.96,
+      "transfers_heldout": 4985,
+      "gap_recovered_heldout_pct": 100.0
+    },
+    {
+      "k": 128,
+      "transfers_full16": 15087,
+      "gap_recovered_full16_pct": 100.0,
+      "transfers_heldout": 4985,
+      "gap_recovered_heldout_pct": 100.0
+    },
+    {
+      "k": "inf",
+      "transfers_full16": 15087,
+      "gap_recovered_full16_pct": 100.0,
+      "transfers_heldout": 4985,
+      "gap_recovered_heldout_pct": 100.0
+    }
+  ]
+}

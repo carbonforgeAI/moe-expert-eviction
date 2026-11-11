@@ -1,0 +1,16 @@
+numpy>=1.26
+PyYAML>=6.0
+
+[dev]
+pytest>=8.0
+ruff>=0.6
+
+[ml]
+torch>=2.3
+transformers>=4.45
+accelerate>=0.33
+datasets>=2.20
+safetensors>=0.4
+
+[plots]
+matplotlib>=3.8

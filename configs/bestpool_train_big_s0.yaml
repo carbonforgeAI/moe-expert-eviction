@@ -1,0 +1,56 @@
+seed: 0
+model:
+  id: allenai/OLMoE-1B-7B-0125
+  revision: 9b0c1aa87e34a20052389dce1f0cf01da783f654
+  dtype: bfloat16
+  device: cuda
+train:
+  # Real training scale-up (staged, seed 0). The binding constraint is per-step wall time
+  # (~41 s/step at len 384 through the per-token soft controller; base=44 steps/30:18 fills the
+  # old 45-min budget). short-unkillable buys 3 h => ~250 steps. This config is 4x the unique data
+  # (256 vs 64 sequences) and ~5x the steps (220 vs 44) of the probe-scale base, at matched
+  # everything else (full objective, frozen base/router/experts; only beta+mu train). Purpose:
+  # test whether reducing overfit (4x data, ~3.4 epochs) moves MMLU accuracy retention toward the
+  # Shen-Henderson <5%-switch/90%-retention point. If it moves, fan out to seeds 1/2 for variance.
+  prompt_dataset:
+    path: teknium/OpenHermes-2.5
+    split: train
+    streaming: true
+    shuffle: true
+    seed: 0
+    shuffle_buffer_size: 8192
+    max_records: 256
+    conversation_field: conversations
+    content_field: value
+  max_sequences: 256
+  batch_size: 4
+  reference_batch_size: 4
+  max_length: 384
+  steps: 220
+  learning_rate: 1.0e-3
+  weight_decay: 0.0
+  gradient_accumulation_steps: 1
+  objective: differentiable_cache
+  lambda_switch: 0.05
+  lambda_commit: 0.02
+  lambda_mu_coverage: 1.0
+  lambda_deliberation: 0.0
+  lambda_load: 0.0
+  cache_capacity: 32
+  initial_router_state: ${MOE_ROOT}/runs/remoe-openhermes-384train-1024-20260620-224832/remoe_train/router_state.pt
+  controller:
+    mechanism: best_of_pool
+    train_router: false
+    continuation_weighting: restricted_softmax
+    state_update_threshold: 0.5
+    coverage_target: current
+    restrict_layers: [4, 5, 6, 7, 8, 11, 12, 13]
+    beta_head:
+      hidden_dim: 128
+      shared_across_layers: true
+      feature_mode: henderson
+    policy_head:
+      hidden_dim: 64
+      shared_across_layers: false
+    lambda_router: 0.01
+output_dir: outputs/bestpool_train_big_s0

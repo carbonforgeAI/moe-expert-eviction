@@ -1,0 +1,31 @@
+# E1: the wall-clock gate. Matches the probe-scale NLL protocol (OpenHermes skip 2080,
+# 16 x 384, ReMoE router preloaded via --router-state, restricted layers {4,5,6,7,8,11,12,13},
+# C=32) so NLL rows line up with docs/DELIBERATION_COST_OPTIONS_RESULTS.md.
+seed: 0
+model:
+  id: allenai/OLMoE-1B-7B-0125
+  revision: 9b0c1aa87e34a20052389dce1f0cf01da783f654
+  dtype: bfloat16
+  device: cuda
+eval:
+  prompt_dataset:
+    path: teknium/OpenHermes-2.5
+    split: train
+    streaming: true
+    shuffle: true
+    seed: 0
+    shuffle_buffer_size: 8192
+    skip_records: 2080
+    max_records: 16
+    conversation_field: conversations
+    content_field: value
+  max_sequences: 16
+  max_length: 384
+  capacity: 32
+  restrict_layers: [4, 5, 6, 7, 8, 11, 12, 13]
+  policies: [resident_gpu, resident_pool, learned]
+  dwells: [1, 2, 4, 8, 16, 32]
+  static_warmup_tokens: 64
+  timing_warmup_steps: 32
+  learned_beta_thresholds: [0.1, 0.5, 0.6, 0.7, 0.8, 0.9]
+output_dir: outputs/offload_wallclock_e5b

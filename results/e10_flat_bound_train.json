@@ -1,0 +1,33 @@
+{
+  "trace": "../../e9/train_trace.npz",
+  "capacity": 32,
+  "heldout_seqs": [
+    12,
+    13,
+    14,
+    15
+  ],
+  "greedy_set_belady": {
+    "full": 51858,
+    "heldout": 4101
+  },
+  "flattened_min": {
+    "asc": {
+      "full": 49947,
+      "heldout": 3947
+    },
+    "desc": {
+      "full": 49963,
+      "heldout": 3957
+    },
+    "random": {
+      "full": 49940,
+      "heldout": 3956
+    }
+  },
+  "equal": {
+    "asc": false,
+    "desc": false,
+    "random": false
+  }
+}

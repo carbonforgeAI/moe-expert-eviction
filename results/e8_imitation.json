@@ -1,0 +1,58 @@
+{
+  "capacity": 32,
+  "seed": 0,
+  "epochs": 20,
+  "holdout_seqs": [
+    12,
+    13,
+    14,
+    15
+  ],
+  "n_train_events": 31243,
+  "features": [
+    "dt_last_use",
+    "log1p_dt_last_use",
+    "ema_use_0.90",
+    "ema_use_0.95",
+    "ema_use_0.99",
+    "uses_last_16",
+    "uses_last_64",
+    "recency_rank",
+    "gap_mean",
+    "gap_std",
+    "overdue_ratio",
+    "log1p_use_count",
+    "layer_frac",
+    "t_frac"
+  ],
+  "held_out": {
+    "lru": 10635,
+    "lfu_ema": 9011,
+    "belady": 4985,
+    "learned_linear": 9809,
+    "learned_mlp": 9231,
+    "mlp_shuffled_labels": 18300
+  },
+  "held_out_gap_recovered_pct": {
+    "lfu_ema": 28.74,
+    "learned_linear": 14.62,
+    "learned_mlp": 24.85,
+    "mlp_shuffled_labels": -135.66
+  },
+  "linear_weights_standardized": {
+    "log1p_use_count": -0.549193,
+    "ema_use_0.99": -0.5066,
+    "ema_use_0.95": -0.406698,
+    "uses_last_64": -0.375249,
+    "layer_frac": -0.26011,
+    "dt_last_use": -0.222909,
+    "t_frac": -0.213442,
+    "ema_use_0.90": -0.155357,
+    "gap_mean": 0.136808,
+    "gap_std": 0.131676,
+    "overdue_ratio": 0.077523,
+    "log1p_dt_last_use": -0.066928,
+    "uses_last_16": 0.062519,
+    "recency_rank": 0.021937
+  }
+}

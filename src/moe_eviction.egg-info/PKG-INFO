@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: moe-eviction
+Version: 0.0.1
+Summary: Research prototype for cache-conditioned, hardware-priced MoE routing
+Requires-Python: >=3.10
+Requires-Dist: numpy>=1.26
+Requires-Dist: PyYAML>=6.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: ruff>=0.6; extra == "dev"
+Provides-Extra: ml
+Requires-Dist: torch>=2.3; extra == "ml"
+Requires-Dist: transformers>=4.45; extra == "ml"
+Requires-Dist: accelerate>=0.33; extra == "ml"
+Requires-Dist: datasets>=2.20; extra == "ml"
+Requires-Dist: safetensors>=0.4; extra == "ml"

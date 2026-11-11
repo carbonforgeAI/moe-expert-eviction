@@ -1,0 +1,31 @@
+# Probs-augmented demand trace for learned eviction (E9).
+# traceprobs48: OpenHermes skip 4000, 48 seqs, ReMoE router, LRU arm only -> demand_trace.npz
+# now also stores the full 64-way router softmax per token (fp16) per layer.
+seed: 0
+model:
+  id: allenai/OLMoE-1B-7B-0125
+  revision: 9b0c1aa87e34a20052389dce1f0cf01da783f654
+  dtype: bfloat16
+  device: cuda
+eval:
+  prompt_dataset:
+    path: teknium/OpenHermes-2.5
+    split: train
+    streaming: true
+    shuffle: true
+    seed: 0
+    shuffle_buffer_size: 8192
+    skip_records: 4000
+    max_records: 48
+    conversation_field: conversations
+    content_field: value
+  max_sequences: 48
+  max_length: 384
+  capacity: 32
+  restrict_layers: [4, 5, 6, 7, 8, 11, 12, 13]
+  policies: [resident_gpu, lru]
+  dwells: []
+  static_warmup_tokens: 64
+  timing_warmup_steps: 32
+  dump_demand_trace: true
+output_dir: outputs/offload_wallclock_traceprobs48

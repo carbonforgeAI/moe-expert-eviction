@@ -1,0 +1,164 @@
+\begin{thebibliography}{20}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bacon et~al.(2017)Bacon, Harb, and Precup]{bacon2017optioncritic}
+Pierre-Luc Bacon, Jean Harb, and Doina Precup.
+\newblock The option-critic architecture.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial
+  Intelligence}, volume~31, pages 1726--1734, 2017.
+\newblock \doi{10.1609/aaai.v31i1.10916}.
+
+\bibitem[Belady(1966)]{belady1966study}
+Laszlo~A. Belady.
+\newblock A study of replacement algorithms for a virtual-storage computer.
+\newblock \emph{IBM Systems Journal}, 5\penalty0 (2):\penalty0 78--101, 1966.
+\newblock \doi{10.1147/sj.52.0078}.
+
+\bibitem[Calanzone et~al.(2026)Calanzone, Ohib, and Bacon]{carmoe2026}
+Diego Calanzone, Riyasat Ohib, and Pierre-Luc Bacon.
+\newblock Cache-aware routing: Towards efficient and stable {MoEs} with
+  reinforcement learning on hardware features.
+\newblock In \emph{NeurIPS 2026 Workshop on Foundations of LLM Post-Training in
+  Changing Environments}, 2026.
+\newblock URL \url{https://openreview.net/forum?id=IuQwkUGjMa}.
+
+\bibitem[Eliseev and Mazur(2023)]{eliseev2023fast}
+Artyom Eliseev and Denis Mazur.
+\newblock Fast inference of mixture-of-experts language models with offloading.
+\newblock \emph{arXiv preprint arXiv:2312.17238}, 2023.
+
+\bibitem[Harb et~al.(2018)Harb, Bacon, Klissarov, and Precup]{harb2018waiting}
+Jean Harb, Pierre-Luc Bacon, Martin Klissarov, and Doina Precup.
+\newblock When waiting is not an option: Learning options with a deliberation
+  cost.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial
+  Intelligence}, volume~32, 2018.
+\newblock \doi{10.1609/aaai.v32i1.11831}.
+
+\bibitem[Jain and Lin(2016)]{jain2016hawkeye}
+Akanksha Jain and Calvin Lin.
+\newblock Back to the future: Leveraging {Belady}'s algorithm for improved
+  cache replacement.
+\newblock In \emph{Proceedings of the 43rd ACM/IEEE Annual International
+  Symposium on Computer Architecture (ISCA)}, pages 78--89, 2016.
+\newblock \doi{10.1109/ISCA.2016.17}.
+
+\bibitem[Kamahori et~al.(2025)Kamahori, Tang, Gu, Zhu, and
+  Kasikci]{fiddler2024}
+Keisuke Kamahori, Tian Tang, Yile Gu, Kan Zhu, and Baris Kasikci.
+\newblock Fiddler: {CPU-GPU} orchestration for fast inference of
+  mixture-of-experts models.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2025.
+
+\bibitem[Kong et~al.(2024)Kong, Li, Feng, Wang, Ye, Ouyang, Kong, and
+  Liu]{kong2024swapmoe}
+Rui Kong, Yuanchun Li, Qingtian Feng, Weijun Wang, Xiaozhou Ye, Ye~Ouyang,
+  Linghe Kong, and Yunxin Liu.
+\newblock {SwapMoE}: Serving off-the-shelf {MoE}-based large language models
+  with tunable memory budget.
+\newblock In \emph{Proceedings of the 62nd Annual Meeting of the Association
+  for Computational Linguistics (Volume 1: Long Papers)}, pages 6710--6720,
+  2024.
+\newblock \doi{10.18653/v1/2024.acl-long.363}.
+
+\bibitem[Liang et~al.(2026)Liang, Wang, Tian, Li, Tang, and
+  Wei]{liang2025local}
+Jingcong Liang, Siyuan Wang, Miren Tian, Yitong Li, Duyu Tang, and Zhongyu Wei.
+\newblock Not all models suit expert offloading: On local routing consistency
+  of mixture-of-expert models.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2026.
+
+\bibitem[Liu et~al.(2020)Liu, Hashemi, Swersky, Ranganathan, and
+  Ahn]{liu2020parrot}
+Evan~Z. Liu, Milad Hashemi, Kevin Swersky, Parthasarathy Ranganathan, and
+  Junwhan Ahn.
+\newblock An imitation learning approach for cache replacement.
+\newblock In \emph{Proceedings of the 37th International Conference on Machine
+  Learning (ICML)}, volume 119 of \emph{Proceedings of Machine Learning
+  Research}, pages 6237--6247, 2020.
+
+\bibitem[Mattson et~al.(1970)Mattson, Gecsei, Slutz, and
+  Traiger]{mattson1970evaluation}
+Richard~L. Mattson, Jan Gecsei, Donald~R. Slutz, and Irving~L. Traiger.
+\newblock Evaluation techniques for storage hierarchies.
+\newblock \emph{IBM Systems Journal}, 9\penalty0 (2):\penalty0 78--117, 1970.
+\newblock \doi{10.1147/sj.92.0078}.
+
+\bibitem[Muennighoff et~al.(2025)Muennighoff, Soldaini, Groeneveld, Lo,
+  Morrison, Min, Shi, Walsh, Tafjord, Lambert, Gu, Arora, Bhagia, Schwenk,
+  Wadden, Wettig, Hui, Dettmers, Kiela, Farhadi, Smith, Koh, Singh, and
+  Hajishirzi]{muennighoff2024olmoe}
+Niklas Muennighoff, Luca Soldaini, Dirk Groeneveld, Kyle Lo, Jacob Morrison,
+  Sewon Min, Weijia Shi, Pete Walsh, Oyvind Tafjord, Nathan Lambert, Yuling Gu,
+  Shane Arora, Akshita Bhagia, Dustin Schwenk, David Wadden, Alexander Wettig,
+  Binyuan Hui, Tim Dettmers, Douwe Kiela, Ali Farhadi, Noah~A. Smith, Pang~Wei
+  Koh, Amanpreet Singh, and Hannaneh Hajishirzi.
+\newblock {OLMoE}: Open mixture-of-experts language models.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2025.
+
+\bibitem[Raje et~al.(2026)Raje, Nayak, and Joshi]{melinoe2026}
+Arian Raje, Anupam Nayak, and Gauri Joshi.
+\newblock {MELINOE}: Fine-tuning enables memory-efficient inference for
+  mixture-of-experts models.
+\newblock \emph{arXiv preprint arXiv:2602.11192}, 2026.
+
+\bibitem[Shao et~al.(2024)Shao, Wang, Zhu, Xu, Song, Bi, Zhang, Zhang, Li, Wu,
+  and Guo]{shao2024deepseekmath}
+Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao Song, Xiao Bi, Haowei
+  Zhang, Mingchuan Zhang, Y.~K. Li, Y.~Wu, and Daya Guo.
+\newblock {DeepSeekMath}: Pushing the limits of mathematical reasoning in open
+  language models.
+\newblock \emph{arXiv preprint arXiv:2402.03300}, 2024.
+
+\bibitem[Shen and Henderson(2026)]{shen2026temporally}
+Zeyu Shen and Peter Henderson.
+\newblock Temporally extended mixture-of-experts models.
+\newblock \emph{Reinforcement Learning Journal}, 7, 2026.
+
+\bibitem[Xue et~al.(2024)Xue, Fu, Lu, Mai, and Marina]{xue2024moeinfinity}
+Leyang Xue, Yao Fu, Zhan Lu, Luo Mai, and Mahesh Marina.
+\newblock {MoE-Infinity}: Efficient {MoE} inference on personal machines with
+  sparsity-aware expert cache.
+\newblock \emph{arXiv preprint arXiv:2401.14361}, 2024.
+
+\bibitem[Yang et~al.(2026)Yang, Fan, Pan, Xi, Wang, Sun, Keutzer, Han, Zaharia,
+  Xu, and Stoica]{freetoken2026}
+Shuo Yang, Xiaoze Fan, Melissa Pan, Haocheng Xi, Zhe Wang, Shanlin Sun, Kurt
+  Keutzer, Song Han, Matei Zaharia, Chenfeng Xu, and Ion Stoica.
+\newblock {FreeToken}: Efficient edge-native {MoE} serving with
+  bandwidth-adaptive execution.
+\newblock \emph{arXiv preprint arXiv:2608.16157}, 2026.
+
+\bibitem[Yu et~al.(2026)Yu, Cui, Zhang, Wang, and Wang]{fmoe2025}
+Hanfei Yu, Xingqi Cui, Hong Zhang, Hao Wang, and Hao Wang.
+\newblock Taming latency-memory trade-off in {MoE}-based {LLM} serving via
+  fine-grained expert offloading.
+\newblock In \emph{Proceedings of the 21st European Conference on Computer
+  Systems (EuroSys)}, pages 176--191, 2026.
+\newblock \doi{10.1145/3767295.3769319}.
+
+\bibitem[Zhong et~al.(2024)Zhong, Liang, Wang, Wang, Huang, and
+  Li]{adapmoe2024}
+Shuzhang Zhong, Ling Liang, Yuan Wang, Runsheng Wang, Ru~Huang, and Meng Li.
+\newblock {AdapMoE}: Adaptive sensitivity-based expert gating and management
+  for efficient {MoE} inference.
+\newblock In \emph{Proceedings of the 43rd IEEE/ACM International Conference on
+  Computer-Aided Design (ICCAD)}, pages 1--9, 2024.
+\newblock \doi{10.1145/3676536.3676741}.
+
+\bibitem[Zhu et~al.(2026)Zhu, Liao, Jiang, Zhang, Wang, and Xiao]{remoe2026}
+Xiongwei Zhu, Xiaojian Liao, Tianyang Jiang, Yusen Zhang, Liang Wang, and Limin
+  Xiao.
+\newblock {ReMoE}: Boosting expert reuse through router fine-tuning in
+  memory-constrained {MoE} {LLM} inference.
+\newblock In \emph{Proceedings of the 43rd International Conference on Machine
+  Learning (ICML)}, 2026.
+
+\end{thebibliography}

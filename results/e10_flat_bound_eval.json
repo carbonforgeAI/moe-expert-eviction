@@ -1,0 +1,33 @@
+{
+  "trace": "../../e9/eval_trace.npz",
+  "capacity": 32,
+  "heldout_seqs": [
+    12,
+    13,
+    14,
+    15
+  ],
+  "greedy_set_belady": {
+    "full": 15087,
+    "heldout": 4985
+  },
+  "flattened_min": {
+    "asc": {
+      "full": 14490,
+      "heldout": 4780
+    },
+    "desc": {
+      "full": 14512,
+      "heldout": 4795
+    },
+    "random": {
+      "full": 14505,
+      "heldout": 4790
+    }
+  },
+  "equal": {
+    "asc": false,
+    "desc": false,
+    "random": false
+  }
+}
